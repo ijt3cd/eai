@@ -1,3 +1,6 @@
+Inputs: Integer N
+Outputs: Top N domain names as reported by Alexa.com, newline separated. 
+
 Bash version:
 
 	Get intended number of domain names
@@ -6,9 +9,14 @@ Bash version:
 
 	-Challenges:
 		Alexa stopped giving programmatic access after too many requests. Continued testing from a .txt file of the HTML.
-			---This means that the discussed solution will probably not be sufficient for the client! Will either have to pay, find another source, or beat Amazon's detection system (fake IPs or something).
+			---This means that the discussed solution will probably not be sufficient for the client! Will either have to pay, find another source, or beat Amazon's detection system (fake IPs or multiple computers something). There seems to be a time delay, so perhaps once a day will never actually result in issues. 
 		Lookahead was not working as expected in regex. Just cut last character instead.
 
 
 
 Java version:
+	Works the same as bash
+	Same challenge with getting locked out by the website after overuse. 
+	Need to verify that it works one last time. 
+
+
