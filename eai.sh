@@ -14,8 +14,8 @@ do
 	# Trim it down to just the domain name, 
 	# Store the domain name in the RESULT variable.
 
-	# curl -s "http://www.alexa.com/topsites/global;$PAGE" | grep -Eoh '(\/siteinfo\/)\S*"' | cut -c11- | sed 's/.$//'
-	RESULT=$(< topsites.html grep -Eoh '(\/siteinfo\/)\S*"' | cut -c11- | sed 's/.$//')
+	RESULT=$(curl -s "http://www.alexa.com/topsites/global;$PAGE" | grep -Eoh '(\/siteinfo\/)\S*"' | cut -c11- | sed 's/.$//')
+	#RESULT=$(< topsites.html grep -Eoh '(\/siteinfo\/)\S*"' | cut -c11- | sed 's/.$//')
 	
 	
 	# Print each domain name to STDOUT if the number printed so far hasn't passed N
